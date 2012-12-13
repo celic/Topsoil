@@ -49,8 +49,6 @@ $darkGreen: darken($green, 20%);
 
 	li{
 		a{
-			color: #FFFFFF;
-
 			transition-property: color;
 			transition-duration: .3s;
 			-moz-transition-property: color;
@@ -59,6 +57,10 @@ $darkGreen: darken($green, 20%);
 			-webkit-transition-duration: .3s;
 			-o-transition-property: color;
 			-o-transition-duration: .3s;
+		
+			&:hover{
+				color: $green !important;
+			}
 		}
 	}
 }
@@ -80,6 +82,7 @@ body{
 .center{
 	text-align: center;
 }
+
 /*------------------ Buttons ------------------*/
 .btn-custom {
   	background-color: hsl(102, 84%, 12%) !important;
@@ -101,20 +104,26 @@ body{
 /*------------------ Sign Up ------------------*/
 .signup{
 
+	padding-top: 30px;
+	margin-left: 0px;
+
 	.left{
 		float: left;
+		margin-left: 0px;
+		padding-top: 5px;
+		text-align: right;
 	}
 
 	.right{
 		float: right;
+		margin-left: 0px;
 	}
 
 	.labels{
 		display: block;
-		padding-top: 4px;
-		padding-bottom: 6px;
+		padding-left: 60%;
+		padding-bottom: 15px;
 		line-height: 20px;
-		margin-top: 6px;
 	}
 
 	.fields{
