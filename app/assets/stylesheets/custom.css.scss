@@ -1,10 +1,13 @@
 @import "bootstrap";
 
+//$brown: #2E1B01; 
 $brown: #462A02;
 $green: #0DAF09;
 $darkGreen: darken($green, 15%);
 $navbarFont: 'cm_sans_serif_2012medium';
 $mainFont: 'coolvetica_rgregular';
+
+/*------------------ Fonts ------------------*/
 
 @font-face {
     font-family: 'cm_sans_serif_2012medium';
@@ -38,7 +41,6 @@ $mainFont: 'coolvetica_rgregular';
     font-weight: normal;
     font-style: normal;
 }
-
 
 /*------------------ Header ------------------*/
 

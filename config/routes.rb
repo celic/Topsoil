@@ -1,7 +1,7 @@
 Topsoil::Application.routes.draw do
   devise_for :users
 
-  get "users/new"
+  resources :users
 
   root to: 'pages#home'
 
