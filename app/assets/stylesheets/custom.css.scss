@@ -1,8 +1,9 @@
 @import "bootstrap";
 
 //$brown: #2E1B01; 
-$brown: #462A02;
-$green: #0DAF09;
+//$brown: #462A02;
+$black: #0B0B0B;
+$green: #058F00;
 $darkGreen: darken($green, 15%);
 $navbarFont: 'cm_sans_serif_2012medium';
 $mainFont: 'coolvetica_rgregular';
@@ -49,7 +50,7 @@ $mainFont: 'coolvetica_rgregular';
 	color: $green;
 	line-height: 1;
 	font-size: 1.7em;
-	padding-top: 6px;
+	padding-top: 10px;
 
 	&:hover{
 		text-decoration: none;
@@ -61,22 +62,25 @@ $mainFont: 'coolvetica_rgregular';
 	font-family: $navbarFont;
 
 	.navbar-inner{
-		background-color: $brown;
+		background-color: $black;
 
-		background-image: -moz-linear-gradient(top, $brown, lighten($brown, 7%));
-		background-image: -ms-linear-gradient(top, $brown, lighten($brown, 7%));
-		background-image: -webkit-gradient(linear, 0 0, 0 50%, from($brown), to(lighten($brown, 7%)));
-		background-image: -webkit-linear-gradient(top, $brown, lighten($brown, 7%));
-		background-image: -o-linear-gradient(top, $brown, lighten($brown, 7%));
-		background-image: linear-gradient(top, $brown, lighten($brown, 7%));
+		background-image: -moz-linear-gradient(top, $black, lighten($black, 10%));
+		background-image: -ms-linear-gradient(top, $black, lighten($black, 10%));
+		background-image: -webkit-gradient(linear, 0 0, 0 50%, from($black), to(lighten($black, 10%)));
+		background-image: -webkit-linear-gradient(top, $black, lighten($black, 10%));
+		background-image: -o-linear-gradient(top, $black, lighten($black, 10%));
+		background-image: linear-gradient(top, $black, lighten($black, 10%));
 		background-repeat: repeat-x;
 
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$brown', endColorstr='lighten($brown, 5%)', GradientType=0);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$black', endColorstr='lighten($black, 10%)', GradientType=0);
 
 		border: 0;
 	}
 
 	li{
+
+		padding-top: 4px;
+
 		a{
 			transition-property: color;
 			transition-duration: .3s;
@@ -91,6 +95,11 @@ $mainFont: 'coolvetica_rgregular';
 				color: $green !important;
 			}
 		}
+	}
+
+	.navbar-search{
+	    margin-top: 3px;
+	    margin-left: 60px;
 	}
 }
 
@@ -122,6 +131,10 @@ body{
 
 span{
 	margin-left: 0 !important;
+}
+
+.inline{
+	display: inline;
 }
 
 /*------------------ Buttons ------------------*/
@@ -235,4 +248,15 @@ span{
 		padding-top: 27px;
 		text-align: right;
 	}
+}
+
+/*------------------ Search ------------------*/
+#search-field{
+	min-height: 13px;
+	max-height: 13px;
+	margin-top: 3px;
+}
+
+#search-button{
+	margin-bottom: 10px;
 }

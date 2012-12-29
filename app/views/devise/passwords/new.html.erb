@@ -1,6 +1,6 @@
 <%= provide(:title, "Reset Password") %>
 
-<% if !has_no_errors! %>
+<% if has_errors! %>
 	<span class="span12 alert alert-error">
 		<%= devise_error_messages! %>
 	</span>

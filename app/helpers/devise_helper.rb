@@ -22,12 +22,12 @@ module DeviseHelper
     html.html_safe
   end
 
-  # Check for errors, return true if there are no errors
-  def has_no_errors!
+  # Check for errors, return true if there are errors
+  def has_errors!
     if resource.errors.empty?
-      true
-    else
       false
+    else
+      true
     end
   end
 end
