@@ -1,10 +1,9 @@
 @import "bootstrap";
 
-//$brown: #2E1B01; 
-//$brown: #462A02;
 $black: #0B0B0B;
 $green: #058F00;
 $darkGreen: darken($green, 15%);
+$darkGray: #999999;
 $navbarFont: 'cm_sans_serif_2012medium';
 $mainFont: 'coolvetica_rgregular';
 
@@ -51,10 +50,6 @@ $mainFont: 'coolvetica_rgregular';
 	margin-right: 40px;
 }
 
-.search-bar{
-	padding-left: 40px;
-}
-
 .navbar{
 
 	font-family: $navbarFont;
@@ -93,11 +88,13 @@ $mainFont: 'coolvetica_rgregular';
 				color: $green !important;
 			}
 		}
+
+		//Handle dropdown stuff here
 	}
 
 	.navbar-search{
 	    margin-top: 3px;
-	    margin-left: 60px;
+	    
 	}
 }
 
@@ -107,11 +104,11 @@ footer {
   	margin-top: 45px;
  	padding-top: 5px;
   	border-top: 1px solid #EAEAEA;
-  	color: #999;
+  	color: $darkGray;
 }
 
 #footer_link{
-	color: #999;
+	color: $darkGray;
 }
 
 /*------------------ Body ------------------*/
@@ -256,5 +253,5 @@ span{
 }
 
 #search-button{
-	margin-bottom: 10px;
+	margin-bottom: 11px;
 }
