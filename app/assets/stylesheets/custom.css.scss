@@ -22,17 +22,6 @@ $mainFont: 'coolvetica_rgregular';
 }
 
 @font-face {
-	font-family: 'evil_green_plantregular';
-	src: url('evilgreenplant1-webfont.eot');
-	src: url('evilgreenplant1-webfont.eot?#iefix') format('embedded-opentype'),
-     	 url('evilgreenplant1-webfont.woff') format('woff'),
-     	 url('evilgreenplant1-webfont.ttf') format('truetype'),
-     	 url('evilgreenplant1-webfont.svg#evil_green_plantregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
     font-family: 'coolvetica_rgregular';
     src: url('coolvetica_rg-webfont.eot');
     src: url('coolvetica_rg-webfont.eot?#iefix') format('embedded-opentype'),
@@ -55,6 +44,15 @@ $mainFont: 'coolvetica_rgregular';
 	&:hover{
 		text-decoration: none;
 	}
+}
+
+.header{
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.search-bar{
+	padding-left: 40px;
 }
 
 .navbar{
