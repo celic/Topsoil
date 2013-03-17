@@ -70,6 +70,10 @@ $mainFont: 'coolvetica_rgregular';
 		border: 0;
 	}
 
+	ul{
+		backgroung-color: $black;
+	}
+
 	li{
 
 		padding-top: 4px;
@@ -89,7 +93,14 @@ $mainFont: 'coolvetica_rgregular';
 			}
 		}
 
-		//Handle dropdown stuff here
+		.dropdown-option{
+			background-color: $black;
+			color: lighten($black, 10%);
+
+			&:hover{
+				background-color: $black;
+			}
+		}
 	}
 
 	.navbar-search{
@@ -114,6 +125,7 @@ footer {
 /*------------------ Body ------------------*/
 body{
 	padding-top: 60px;
+	background-image: image-url("/assets/white_paperboard.png");
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6{
@@ -132,6 +144,9 @@ span{
 	display: inline;
 }
 
+.search-div{
+	margin-left: 40%;
+}
 /*------------------ Buttons ------------------*/
 .btn-custom {
 
