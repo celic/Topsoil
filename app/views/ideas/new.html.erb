@@ -1,3 +1,4 @@
+<%= provide(:tite, "New Idea") %>
 <h1>New Idea</h1>
 <%= form_for @idea do |f| %>
 
@@ -7,5 +8,5 @@
 	<%= f.label :description %>
 	<%= f.text_area :description %>
 
-	<%= f.submit %>
+	<%= f.submit class: 'btn btn-primary btn-large btn-custom' %>
 <% end %>

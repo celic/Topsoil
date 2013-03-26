@@ -29,8 +29,12 @@ class User < ActiveRecord::Base
 	# Setup accessible (or protected) attributes for your model
 	attr_accessible :name, :email, :password, :password_confirmation, :remember_me
 
+	# Validations
 	validates :name, presence: true
 	validates :email, presence: true
+
+	# Relationships
+	has_many :ideas, dependent: :destroy
 
 	def self.search(search)
 		if search

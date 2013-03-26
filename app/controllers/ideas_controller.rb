@@ -11,9 +11,10 @@ class IdeasController < ApplicationController
 
   def create
   	if @idea = Idea.create(params[:idea])
-  		#success
+  	  flash[:success] = "Idea successfully created."
+      redirect_to ideas(@idea)_show_path 
   	else
-  		flash[:error] = "Error saving idea. Check that all forms are complete."
+  	  flash[:error] = "Error saving idea. Check that all forms are complete."
   	end
   end
 end
