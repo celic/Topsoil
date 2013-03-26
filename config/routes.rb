@@ -4,10 +4,11 @@ Topsoil::Application.routes.draw do
 
   resources :users
   resources :ideas
+  resources :pages
+
+  match '/search' => 'pages#search'
 
   root :to => 'pages#home'
-
-  match '/search', :to => 'pages#search'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

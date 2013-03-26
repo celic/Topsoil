@@ -4,6 +4,9 @@ gem 'rails', '3.2.9'
 gem 'bootstrap-sass'
 gem 'devise'
 
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
 group :development, :test do
 	gem 'sqlite3', '1.3.5'
 	gem 'rspec-rails'

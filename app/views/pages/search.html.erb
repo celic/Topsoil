@@ -1,18 +1,13 @@
 <%= provide(:title, "Search") %>
 <h2>Search results for '<%= params[:search] %>'</h2>
 
-<!-- move this line to controller -->
 <% users = User.search(params[:search]) %>
 
 <% if users.empty? %>
-
 	<p>Your search returned no results.</p>
-
 <% else %>
-
 	<p>Your search returned <%= users.size %> results.</p>
-
-	<table class="table-striped table-bordered span12">
+	<table class="table-striped table-bordered span12 users">
 		<thead>
 			<tr>
 				<th>User</th>
@@ -24,5 +19,4 @@
 			<%= render collection: users, partial: "layouts/search_results", as: :user %>
 		</tbody>
 	</table>
-
 <% end %>
