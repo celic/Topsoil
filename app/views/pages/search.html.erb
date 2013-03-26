@@ -7,16 +7,10 @@
 	<p>Your search returned no results.</p>
 <% else %>
 	<p>Your search returned <%= users.size %> results.</p>
-	<table class="table-striped table-bordered span12 users">
-		<thead>
-			<tr>
-				<th>User</th>
-				<th>Number of Followers</th>
-				<th>Net Idea Worth</th>
-			</tr>
-		</thead>
-		<tbody>
-			<%= render collection: users, partial: "layouts/search_results", as: :user %>
-		</tbody>
-	</table>
+	<!-- needs work -->
+	<%= will_paginate %>
+	<ul class="users">
+		<%= render users %>
+	</ul>
+	<%= will_paginate %>
 <% end %>
