@@ -1,5 +1,13 @@
 class IdeasController < ApplicationController
   def show
+    if @idea.user_id != current_user.id
+      if @idea.private?
+        flash[:error] = "That idea is private. Only its creator can view it."
+      else
+        render "show"
+      end
+      render "show"
+    end
   end
 
   def edit
