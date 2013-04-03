@@ -1,2 +1,6 @@
-<h1>Ideas#show</h1>
-<p>Find me in app/views/ideas/show.html.erb</p>
+<%= provide(:title, @idea.name) %>
+
+<h2><%= @idea.name %></h2>
+<h3>By: <%= @idea.creator_name %></h3>
+
+<p><%= @idea.description %></p>

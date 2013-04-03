@@ -1,6 +1,9 @@
 class IdeasController < ApplicationController
   def show
-    if @idea.user_id != current_user.id
+
+    @idea = Idea.find_by_id(@idea.id)
+
+    if @idea.user != current_user
       if @idea.private?
         flash[:error] = "That idea is private. Only its creator can view it."
       else
@@ -14,14 +17,15 @@ class IdeasController < ApplicationController
   end
 
   def new
-  	@idea = Idea.new
+  	@idea = current_user.ideas.new
   end
 
   def create
-  	if @idea = Idea.create(params[:idea])
-  		#success
+  	if @idea = current_user.ideas.create(params[:idea])
+  		render "show"
   	else
   		flash[:error] = "Error saving idea. Check that all forms are complete."
+      render "new"
   	end
   end
 end

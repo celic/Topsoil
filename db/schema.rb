@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(:version => 20130403184312) do
     t.string   "name"
     t.string   "description"
     t.integer  "user_id"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-    t.boolean  "private",     :default => true
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.boolean  "private",     :default => false
   end
 
   create_table "users", :force => true do |t|
