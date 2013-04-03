@@ -9,12 +9,13 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  private     :boolean          default(FALSE)
+#  rating      :integer          default(0)
 #
 
 class Idea < ActiveRecord::Base
 
   # Accessible attributes
-  attr_accessible :description, :name, :private
+  attr_accessible :description, :name, :private, :rating
 
   # Validations
   validates :name, presence: true
@@ -26,6 +27,14 @@ class Idea < ActiveRecord::Base
   # Member methods
   def creator_name
     self.user.name
+  end
+
+  def upvote
+    @rating++;
+  end
+
+  def downvote
+    @rating--;
   end
 
 end

@@ -9,6 +9,7 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  private     :boolean          default(FALSE)
+#  rating      :integer          default(0)
 #
 
 require 'spec_helper'

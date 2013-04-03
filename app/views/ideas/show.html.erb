@@ -3,4 +3,6 @@
 <h2><%= @idea.name %></h2>
 <h3>By: <%= @idea.creator_name %></h3>
 
+<p>This idea is <%= @idea.private? ? "private" : "public" %></p>
+
 <p><%= @idea.description %></p>
