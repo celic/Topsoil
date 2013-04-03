@@ -35,6 +35,7 @@ class User < ActiveRecord::Base
 
 	# Relationships
 	has_many :ideas
+	#has_many :comments
 
 	def self.search(search)
 		if search

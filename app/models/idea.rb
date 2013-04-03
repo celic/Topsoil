@@ -23,6 +23,7 @@ class Idea < ActiveRecord::Base
 
   # Relationships
   belongs_to :user
+  #has_many :comments
 
   # Member methods
   def creator_name
