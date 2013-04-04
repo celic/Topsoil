@@ -1,7 +1,7 @@
 <%= provide(:title, @idea.name) %>
 
 <h2><%= @idea.name %></h2>
-<h3>By: <%= @idea.creator_name %></h3>
+<h3>By: <%= @idea.user.name %></h3>
 
 <p>This idea is <%= @idea.private? ? "private" : "public" %></p>
 
