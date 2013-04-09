@@ -23,10 +23,6 @@ end
 
 gem 'jquery-rails'
 
-group :production do
-	gem 'sqlite3', '1.3.5'
-end
-
 group :test do
 	gem 'capybara', '1.1.2'
 end
