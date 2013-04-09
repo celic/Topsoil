@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
 	devise :database_authenticatable, :registerable,
 		   :recoverable, :rememberable, :trackable, :validatable
 
-	# Setup accessible (or protected) attributes for your model
+	# Accessible Attributes
 	attr_accessible :name, :email, :password, :password_confirmation, :remember_me
 
 	# Validations
@@ -34,7 +34,8 @@ class User < ActiveRecord::Base
 	validates :email, presence: true
 
 	# Relationships
-	has_many :ideas, dependent: :destroy
+	has_many :ideas
+	#has_many :comments
 
 	def self.search(search)
 		if search

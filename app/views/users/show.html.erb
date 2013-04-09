@@ -2,18 +2,28 @@
 
 <div class="user_pages container">
 	<div class="user_info">
-		<span class="span12 inline">
+		<div class="span12 inline">
 			<%= gravatar_for @user %>
 			<h1><%= @user.name %></h1>
-		</span>
+		</div>
 	</div>
 
 	<div class="user_ideas">
-		<span class="span6 left">
+		<div class="span6 left">
 			<h3><%= @user.name %>'s Ideas</h3>
-		</span>
-		<span class="span6 right">
-			<p>Sort by:</p>
-		</span>
+		</div>
+		<div class="span6 right">
+
+		</div>
+		<div class="span12">
+			<table class="table table-bordered table-striped">
+			  <tr>
+			    <th>Name</th>
+			    <th>Rating</th>
+			    <th>Created</th>
+			  </tr>
+			  <%= render collection: @user.ideas, partial: 'idea', as: :idea %>
+			</table>
+		</div>
 	</div>
 </div>

@@ -1,2 +1,8 @@
-<h1>Ideas#show</h1>
-<p>Find me in app/views/ideas/show.html.erb</p>
+<%= provide(:title, @idea.name) %>
+
+<h2><%= @idea.name %></h2>
+<h3>By: <%= @idea.user.name %></h3>
+
+<p>This idea is <%= @idea.private? ? "private" : "public" %></p>
+
+<p><%= @idea.description %></p>

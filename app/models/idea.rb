@@ -8,22 +8,34 @@
 #  user_id     :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  private     :boolean          default(FALSE)
+#  rating      :integer          default(0)
 #
 
 class Idea < ActiveRecord::Base
 
-  # Attributes
-  attr_accessible :description, :name
+  # Accessible attributes
+  attr_accessible :description, :name, :private, :rating
 
   # Validations
+  validates :name, presence: true
   validates :user_id, presence: true
-  validates :name, presence: true, length: { maximum: 140 }
-  validates :description, presence: true
 
   # Relationships
   belongs_to :user
+  #has_many :comments
 
-  # Scope
-  default_scope order: 'ideas.created_at DESC'
+  # Member methods
+  def upvote
+    rating += 1;
+  end
+
+  def downvote
+    rating -= 1;
+  end
+
+  def public?
+    !private
+  end
 
 end
