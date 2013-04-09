@@ -7,7 +7,9 @@ class IdeasController < ApplicationController
     if @idea.public?
       render "show"
     else
-      if @idea.user != current_user
+      if !signed_in?
+        flash[:error] = "That idea is private. Please sign in to view the idea if you created it."
+      elsif @idea.user != current_user
         render "show"
       else
         flash[:error] = "That idea is private. Only its creator can view it."
