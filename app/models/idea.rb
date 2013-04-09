@@ -26,10 +26,6 @@ class Idea < ActiveRecord::Base
   #has_many :comments
 
   # Member methods
-  def creator_name
-    self.user.name
-  end
-
   def upvote
     rating += 1;
   end

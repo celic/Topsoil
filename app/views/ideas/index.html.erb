@@ -1,6 +1,6 @@
 <%= provide(:title, "All Ideas") %>
 
-<h2>View all ideas<h2>
+<h2>View all ideas</h2>
 
 <table class="table table-bordered table-striped">
   <tr>
@@ -9,7 +9,7 @@
     <th>Rating</th>
     <th>Created</th>
   </tr>
-  <%= render collection: @ideas, partial: "ideas/_idea", as: :idea %>
+  <%= render collection: @ideas, partial: 'idea', as: :idea %>
 </table>
 
 <%= will_paginate @ideas %>
