@@ -149,12 +149,13 @@ span{
 }
 
 .push-top{
-	margin-top: 20px;
+	margin-top: 20px !important;
 }
 
 .push-bottom{
-	margin-bottom: 20px;
+	margin-bottom: 20px !important;
 }
+
 /*------------------ Buttons ------------------*/
 .btn-custom {
 
@@ -165,7 +166,7 @@ span{
   	background-image: -moz-linear-gradient(top, $green, $darkGreen);
   	background-image: -ms-linear-gradient(top, $green, $darkGreen);
   	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $green), color-stop(100%, $darkGreen));
-	background-image: -webkit-linear-gradient(top, $green, $darkGreen);
+		background-image: -webkit-linear-gradient(top, $green, $darkGreen);
   	background-image: -o-linear-gradient(top, $green, $darkGreen);
   	background-image: linear-gradient($green, $darkGreen);
   	border-color: $darkGreen $darkGreen hsl(102, 84%, 4.5%);
@@ -183,7 +184,6 @@ span{
 .rating-column{
 	width: 50px;
 }
-
 
 /*------------------ Devise Views ------------------*/
 .signup, .signin, .reset{
