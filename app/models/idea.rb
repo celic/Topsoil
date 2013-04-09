@@ -34,4 +34,8 @@ class Idea < ActiveRecord::Base
     rating -= 1;
   end
 
+  def public?
+    !private
+  end
+
 end
