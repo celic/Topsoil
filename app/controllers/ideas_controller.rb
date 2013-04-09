@@ -27,6 +27,7 @@ class IdeasController < ApplicationController
 
   def create
   	if @idea = current_user.ideas.create(params[:idea])
+      flash[:success] = "Idea successfully created."
   		render "show"
   	else
   		flash[:error] = "Error saving idea. Check that all forms are complete."

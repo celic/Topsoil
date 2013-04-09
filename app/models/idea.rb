@@ -31,11 +31,11 @@ class Idea < ActiveRecord::Base
   end
 
   def upvote
-    #@rating++;
+    rating += 1;
   end
 
   def downvote
-    #@rating--;
+    rating -= 1;
   end
 
 end

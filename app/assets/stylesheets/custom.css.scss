@@ -87,7 +87,7 @@ $mainFont: 'coolvetica_rgregular';
 			-webkit-transition-duration: .3s;
 			-o-transition-property: color;
 			-o-transition-duration: .3s;
-		
+
 			&:hover{
 				color: $green !important;
 			}
@@ -105,7 +105,7 @@ $mainFont: 'coolvetica_rgregular';
 
 	.navbar-search{
 	    margin-top: 3px;
-	    
+
 	}
 }
 
@@ -146,6 +146,14 @@ span{
 
 .search-div{
 	margin-left: 40%;
+}
+
+.push-top{
+	margin-top: 20px;
+}
+
+.push-bottom{
+	margin-bottom: 20px;
 }
 /*------------------ Buttons ------------------*/
 .btn-custom {
@@ -207,11 +215,11 @@ span{
 
 /*------------------ Flash Alerts ------------------*/
 .alert{
-    
+
     border-radius: 1;
 
     &.alert-error{
-       
+
         ul{
             list-style-type: none;
             margin: 0;
@@ -224,7 +232,7 @@ span{
 }
 
 #error-explanation{
-    
+
     ul{
         list-style-type: none;
         margin: 0;
