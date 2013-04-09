@@ -1,15 +1,17 @@
 class IdeasController < ApplicationController
-  def show
+  before_filter :authenticate_user!, except: [:show]
 
+  def show
     @idea = Idea.find_by_id(@idea.id)
 
-    if @idea.user != current_user
-      if @idea.private?
-        flash[:error] = "That idea is private. Only its creator can view it."
-      else
-        render "show"
-      end
+    if @idea.public?
       render "show"
+    else
+      if @idea.user != current_user
+        render "show"
+      else
+        flash[:error] = "That idea is private. Only its creator can view it."
+      end
     end
   end
 
