@@ -4,8 +4,6 @@ Topsoil provides an online service to allow specific personel
 to comment on and propose new ideas. However clients may also
 use this software with a privacy (and idea-safety) gaurentee.
 
-In addition: I can't spell.
 
 Thanks all,
-Codequarry 2012
 Chris Celi
