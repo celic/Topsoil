@@ -4,7 +4,7 @@ gem 'rails', '3.2.9'
 gem 'bootstrap-sass'
 gem 'devise'
 
-gem 'will_paginate'
+gem 'will_paginate', '> 3.0'
 gem 'bootstrap-will_paginate'
 
 group :development, :test do

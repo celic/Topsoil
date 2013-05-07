@@ -1,6 +1,6 @@
 <%= form_tag(search_path, { method: :get, class: "navbar-search pull-left", id: "search-form" }) do %>
   	<div class="pull-left center">
-  		<%= text_field_tag :search, params[:search], id: "search-field", placeholder: "Search for users or ideas" %>
+  		<%= text_field_tag :search, params[:search], id: "search-field", placeholder: "Search for ideas" %>
   		<%= submit_tag "Search", name: nil, class: "btn-custom btn btn-small", id: "search-button" %>
   	</div>
 <% end %>

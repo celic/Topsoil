@@ -1,16 +1,9 @@
 <%= provide(:title, "Search") %>
 <h2>Search results for '<%= params[:search] %>'</h2>
 
-<% users = User.search(params[:search]) %>
-
-<% if users.empty? %>
+<% if @ideas.empty? %>
 	<p>Your search returned no results.</p>
 <% else %>
-	<p>Your search returned <%= users.size %> results.</p>
-	<!-- needs work -->
-	<%= will_paginate %>
-	<ul class="users">
-		<%= render users %>
-	</ul>
-	<%= will_paginate %>
+	<p>Your search returned <%= @ideas.size %> results.</p>
+	<%= will_paginate @ideas %>
 <% end %>
