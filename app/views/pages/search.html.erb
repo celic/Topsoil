@@ -6,4 +6,7 @@
 <% else %>
 	<p>Your search returned <%= @ideas.size %> results.</p>
 	<%= will_paginate @ideas %>
+	<ul class="ideas">
+		<%= render @ideas %>
+	</ul>
 <% end %>

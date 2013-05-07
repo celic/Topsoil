@@ -4,6 +4,6 @@ class PagesController < ApplicationController
   end
 
   def search
-  	@ideas = Idea.search(params[:search]).page(params[:page]).per_page(20)
+  	@ideas = Idea.search(params[:search], params[:page]).page(params[:page]).per_page(20)
   end
 end
